@@ -1,0 +1,17 @@
+{
+  "name": "jsonCheckloud",
+  "version": "0.1.0",
+  "author":{
+    "name": "Charles Bao",
+    "url": "http://www.charlesbao.com/"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "ejs": "*",
+    "express": "*",
+    "moment": "*"
+  }
+}
