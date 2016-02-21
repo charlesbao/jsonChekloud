@@ -1,0 +1,70 @@
+.download,.upload,.mkdir,.rename{
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    top: 0px;
+    height: 50px;
+    width: 210px;
+    right: 100px;
+    z-index: 100;
+}
+.upload{
+    height: 90px;
+}
+#name,#file,#mkdir{
+    position: relative;
+    border: 0;
+    height: 30px;
+    margin: 10px;
+}
+#rename,#file_upload,#submit{
+    background-color: white;
+    border: 0;
+    height: 30px;
+    margin-left: -10px;
+    position: relative;
+    top: -1px;
+}
+#file{
+    color: white;
+    width: 190px;
+}
+#file_upload{
+    width: 190px;
+    left: 20px;
+}
+.file a{
+    color: #381f17;
+}
+.names{
+    cursor: pointer;
+}
+.fix-bar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height:30px;
+    background: rgba(0,0,0,0.5);
+    color:white;
+    line-height: 30px;
+    font-size: 15px;
+    padding:0px 15px;
+}
+.back-btn{
+    cursor: pointer;
+    padding: 10px 2px;
+    color: #381f17;
+    width: 100%;
+    float: left;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+#mask{
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    font-size: 35px;
+    background: #381f17;
+    color:white;
+}

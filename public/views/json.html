@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta charset="UTF-8">
+    <title><%= name %> - JSON CHECKLOUD</title>
+    <link href="../static/styles.css" rel="stylesheet">
+</head>
+<body>
+<nav><a class="show-danger"></a></nav>
+<% for(each in content['products']){ %>
+<table id="<%= each %>">
+    <tr class="float-label"><td><%= each %></td></tr>
+<% for(key in content['products'][each]){%>
+    <tr onclick="comment(this)">
+        <td class="productKey"><%= key %></td>
+        <% if(content['products'][each][key].indexOf('http')){ %>
+            <% if(/<(.+?)>/.test(content['products'][each][key])){ %>
+            <td class="productValue danger">
+            <% }else{ %>
+            <td class="productValue">
+            <% } %>
+        <%= content['products'][each][key] %>
+        </td>
+        <% }else{ %>
+        <td class="productValueHTTP"><%= content['products'][each][key] %></td>
+        <% } %>
+    </tr>
+<% } %>
+</table>
+<% } %>
+<script src="http://cdn.bootcss.com/jquery/1.12.0/jquery.min.js"></script>
+<script src="../static/main.js"></script>
+</body>
+</html>

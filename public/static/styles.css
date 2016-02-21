@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+}
+body,html{
+    margin:0;
+    background: #381f17;
+}
+body,html,table,tr{
+    width:100%;
+    float: left;
+}
+a{
+    text-decoration: none;
+    color:#0E4ACC;
+}
+.danger{
+    color:#F5460C;
+}
+table{
+    margin-bottom:10px;
+    padding: 10px;
+}
+tbody{
+    padding: 5px;
+    background: white;
+}
+tr{
+    width:100%;
+    float: left;
+    background: white;
+}
+tr:nth-child(2n+1){
+    background: #fefefe;
+}
+.productKey{
+    font-weight: bold;
+}
+tr.float-label{
+    background-color: rgba(255,255,255,0.8);
+    position: absolute;
+    right: 12px;
+    width: 50px;
+    height: 35px;
+    box-shadow: -1px 1px 2px rgba(0,0,0,0.3);
+    text-align: center;
+}
+tr.float-label > td{
+    width: 100%;
+}
+td {
+    float: left;
+    width: 50%;
+    list-style: none;
+    white-space: normal;
+    word-break : break-all;
+    padding:10px;
+}
+td > span{
+    float: left;
+}
+img{
+    height:100%;
+    width:100%;
+    max-width: 130px;
+}
+nav{
+    position: fixed;
+    background-color: white;
+    z-index: 100;
+    top: -40px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    line-height: 20px;
+    min-height: 40px;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+}
+nav.active{
+    transform: translateY(40px);
+}
+nav > a{
+    float: left;
+}
+nav > a > span,nav > a > a{
+    padding: 10px;
+    float: left;
+    color: #F5460C;
+    border-right: 0px ;
+}
+nav > a > a{
+    color:#381f17;
+    border-right: 2px dashed darkgray;
+}
+#mask{
+    position: fixed;
+    max-width: 400px;
+    width: 100%;
+    height: 150px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: white;
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.1);
+    transition: all 1s;
+    bottom: 20px;
+    right: -401px;
+    z-index: 200;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+
+}
+textarea{
+    width: 100%;
+    height: 120px;
+    font-size: 16px;
+    resize: none;
+    overflow-y: auto;
+    padding: 10px;
+    outline: none;
+    color: #381f17;
+    border: none;
+    border-bottom: 2px dashed #381f17;
+}
+input {
+    width: 80%;
+    height: 27px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    color: #381f17;
+}
+.submit{
+    width: 20%;
+    float: right;
+    height: 29px;
+    line-height: 29px;
+    text-align: center;
+    background: #381f17;
+    color: white;
+    margin-top: -2px;
+    cursor: pointer;
+}
+#mask.active{
+    transform: translateX(-400px);
+}
+tr.active{
+    background: #FFDD00;
+}
+tr.comment{
+    background: #ff9f00;
+}

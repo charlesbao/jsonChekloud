@@ -1,0 +1,29 @@
+<div class="fix-bar">/ <%= path.replace(/\$/g,' / ') %></div>
+<div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th style="width: 50%">FILE NAME</th>
+                    <th>FILE SIZE</th>
+                    <th>UPDATE TIME</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <% for(var i=0; i<detail.length; i++){ %>
+                    <tr class="list">
+                        <% if(detail[i]['type']=='dir'){ %>
+                        <td><span class='names'><a href="/<%= path %><%= detail[i]['name'] %>$"><%= detail[i]['name'] %></a></span>
+                        <% }else{ %>
+                        <td class="file"><span class='names'><a href="/<%= path %><%= detail[i]['name'] %>"><%= detail[i]['name'] %></a></span>
+                        <% } %>
+                        </td>
+                        <td><%= detail[i]['size'] %></td>
+                        <td><%= detail[i]['time'] %></td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+            <% if(path != ''){ %><div><a href="/<%= path.replace(/([^$]+?)\$$/,'') %>" class="back-btn">GO BACK</a></div><% } %>
+        </div>
+</div>
